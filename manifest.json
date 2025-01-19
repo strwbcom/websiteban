@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Site Overlay",
+    "version": "1.0",
+    "description": "Display custom overlay on specified websites",
+    "permissions": ["storage", "activeTab"],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "css": ["styles.css"],
+        "js": ["content.js"]
+      }
+    ],
+    "background": {
+      "service_worker": "background.js"
+    }
+  }
+  
+  
